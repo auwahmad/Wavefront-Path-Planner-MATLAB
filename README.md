@@ -26,13 +26,16 @@ The algorithm supports different neighbor connectivity, which dictates how the "
 *   **8-Connected:** Includes diagonal movements (Chebyshev distance), resulting in shorter, more direct paths.
 
 | 4-Connectedness | 8-Connectedness |
-| :--- | :--- |
-| <img src="images/WavefrontApp_4connectedness.png" width="50%" alt="4-Connectedness Demo"> | <img src="images/WavefrontApp_8connectedness.png" width="50%" alt="8-Connectedness Demo"> |
+| :---: | :---: |
+| <img src="images/WavefrontApp_4connectedness.png" width="400" alt="4-Connectedness Demo"> | <img src="images/WavefrontApp_8connectedness.png" width="400" alt="8-Connectedness Demo"> |
+| *Restricted to Up, Down, Left, Right* | *Includes Diagonals* |
 
 ### **Obstacle Handling & Blocked Paths**
 The planner intelligently navigates around objects (Value = 1). If the goal is completely enclosed by obstacles, the algorithm will terminate and notify the user that no path is possible.
 
-<img src="images/WavefrontApp_BlockPaths.png" width="50%" alt="Blocked Path">
+<p align="center">
+  <img src="images/WavefrontApp_BlockPaths.png" width="600" alt="Blocked Path">
+</p>
 
 ---
 
