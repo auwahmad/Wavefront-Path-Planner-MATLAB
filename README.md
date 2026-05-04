@@ -1,6 +1,6 @@
-# Wavefront Path Planning Toolkit
+# Wavefront Path Planner MATLAB
 
-A comprehensive MATLAB-based suite for exploring and implementing the Wavefront (Grassfire) path planning algorithm. This repository includes a modular function, an interactive GUI application, and a Live Script for educational purposes.
+Implementing the Wavefront (Grassfire) path planning algorithm. This repository includes a modular function, an interactive GUI application, and a Live Script for educational purposes.
 
 ## 📖 What is the Wavefront Algorithm?
 The **Wavefront Path Planner** is a grid-based navigation technique used in robotics to find the shortest path from a starting point to a goal. 
@@ -13,7 +13,7 @@ It operates in two distinct phases:
 This project provides three distinct ways to utilize the algorithm:
 *   **`wavefront_planner.m`**: A modular MATLAB function for integration into external scripts.
 *   **`waveFront_Algorithm_App.mlapp`**: An interactive GUI for building maps and visualizing the wave in real-time.
-*   **`Wavefront_Tutorial.mlx`**: A Live Script that breaks down the math and logic step-by-step.
+*   **`wavefront_path_planner.mlx`**: A Live Script that breaks down the math and logic step-by-step.
 
 ---
 
@@ -27,7 +27,7 @@ The algorithm supports different neighbor connectivity, which dictates how the "
 
 | 4-Connectedness | 8-Connectedness |
 | :--- | :--- |
-| ![4-Way Path](images/4_connected_result.png) | ![8-Way Path](images/8_connected_result.png) |
+| ![4-Way Path](images/4_connected_result.png) | ![8-Way Path](images/WavefrontApp_Demo_2.png) |
 
 ### **Obstacle Handling & Blocked Paths**
 The planner intelligently navigates around objects (Value = 1). If the goal is completely enclosed by obstacles, the algorithm will terminate and notify the user that no path is possible.
@@ -49,8 +49,34 @@ connectivity = 8;        % Choose 4 or 8
 
 % Run the planner
 [path, costMap, pathLen] = wavefront_planner(map, start, goal, connectivity);
+```
+## 📱 Interactive MATLAB App
 
-% Display Result
-disp('Path Indexes:');
-disp(path);
-fprintf('Path calculated with %d steps.\n', pathLen);
+The **Wavefront Path Planning App** provides a user-friendly interface for real-time experimentation. It allows users to dynamically build maps, place obstacles, and visualize the propagation and backtracking phases.
+
+### **Key Features:**
+*   **Dynamic Grid:** Adjust map size and Start/Goal coordinates instantly.
+*   **Interactive Obstacles:** Toggle obstacles (1) and free space (0) directly in the "Map Matrix" table.
+*   **Live Visualization:** Watch the wave propagate numerically across the grid using `drawnow` animations.
+*   **Data Export:** Save the `CostMap`, `Path`, and `Length` to the MATLAB Workspace for further analysis.
+
+---
+
+### **Simulation Scenarios**
+
+Below are the visual demonstrations of the algorithm in different configurations.
+
+#### **1. 8-Connectedness (Diagonal Movement)**
+*In this mode, the "wave" spreads to all 8 neighbors, allowing for diagonal traversal and shorter path lengths.*
+
+![8-Connectedness Demo](images/8_connected_demo.gif)
+
+#### **2. 4-Connectedness (Manhattan Movement)**
+*Movement is restricted to cardinal directions (Up, Down, Left, Right). The resulting path follows a "city-block" geometry.*
+
+![4-Connectedness Demo](images/4_connected_demo.gif)
+
+#### **3. Blocked Path Handling**
+*If obstacles completely enclose the Goal or Start, the algorithm detects that the wave cannot reach its destination and notifies the user.*
+
+![Blocked Path Demo](images/blocked_path_demo.gif)
