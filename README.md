@@ -27,12 +27,12 @@ The algorithm supports different neighbor connectivity, which dictates how the "
 
 | 4-Connectedness | 8-Connectedness |
 | :--- | :--- |
-| ![4-Way Path](images/4_connected_result.png) | ![8-Way Path](images/WavefrontApp_Demo_2.png) |
+| ![4-Way Path](images/WavefrontPlanner_4connectedness.png) | ![8-Way Path](images/WavefrontPlanner_8connectedness.png) |
 
 ### **Obstacle Handling & Blocked Paths**
 The planner intelligently navigates around objects (Value = 1). If the goal is completely enclosed by obstacles, the algorithm will terminate and notify the user that no path is possible.
 
-![Blocked Path Example](images/blocked_path.png)
+![Blocked Path Example](images/WavefrontApp_BlockPath.png)
 
 ---
 
@@ -69,14 +69,14 @@ Below are the visual demonstrations of the algorithm in different configurations
 #### **1. 8-Connectedness (Diagonal Movement)**
 *In this mode, the "wave" spreads to all 8 neighbors, allowing for diagonal traversal and shorter path lengths.*
 
-![8-Connectedness Demo](images/8_connected_demo.gif)
+![8-Connectedness Demo](images/WavefrontApp_8connectedness.gif)
 
 #### **2. 4-Connectedness (Manhattan Movement)**
 *Movement is restricted to cardinal directions (Up, Down, Left, Right). The resulting path follows a "city-block" geometry.*
 
-![4-Connectedness Demo](images/4_connected_demo.gif)
+![4-Connectedness Demo](images/WavefrontApp_4connectedness.gif)
 
 #### **3. Blocked Path Handling**
 *If obstacles completely enclose the Goal or Start, the algorithm detects that the wave cannot reach its destination and notifies the user.*
 
-![Blocked Path Demo](images/blocked_path_demo.gif)
+![Blocked Path Demo](images/WavefrontApp_BlockPath.gif)
