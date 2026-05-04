@@ -27,12 +27,12 @@ The algorithm supports different neighbor connectivity, which dictates how the "
 
 | 4-Connectedness | 8-Connectedness |
 | :--- | :--- |
-| ![4-Way Path](images/WavefrontPlanner_4connectedness.png) | ![8-Way Path](images/WavefrontPlanner_8connectedness.png) |
+| <img src="images/WavefrontApp_4connectedness.png" width="50%" alt="4-Connectedness Demo"> | <img src="images/WavefrontApp_8connectedness.png" width="50%" alt="8-Connectedness Demo"> |
 
 ### **Obstacle Handling & Blocked Paths**
 The planner intelligently navigates around objects (Value = 1). If the goal is completely enclosed by obstacles, the algorithm will terminate and notify the user that no path is possible.
 
-![Blocked Path Example](images/WavefrontPlanner_BlockedPath.png)
+<img src="images/WavefrontApp_BlockPaths.png" width="50%" alt="Blocked Path">
 
 ---
 
