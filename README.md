@@ -69,14 +69,14 @@ Below are the visual demonstrations of the algorithm in different configurations
 #### **1. 8-Connectedness (Diagonal Movement)**
 *In this mode, the "wave" spreads to all 8 neighbors, allowing for diagonal traversal and shorter path lengths.*
 
-<img src="images/WavefrontApp_8connectedness.gif" width="400" alt="8connectedness">
+<img src="images/WavefrontApp_8connectedness.gif" width="600" alt="8connectedness">
 
 #### **2. 4-Connectedness (Manhattan Movement)**
 *Movement is restricted to cardinal directions (Up, Down, Left, Right). The resulting path follows a "city-block" geometry.*
 
-<img src="images/WavefrontApp_4connectedness.gif" width="400" alt="4connectedness">
+<img src="images/WavefrontApp_4connectedness.gif" width="600" alt="4connectedness">
 
 #### **3. Blocked Path Handling**
 *If obstacles completely enclose the Goal or Start, the algorithm detects that the wave cannot reach its destination and notifies the user.*
 
-<img src="images/WavefrontApp_BlockPath.gif" width="400" alt="Blocked Path">
+<img src="images/WavefrontApp_BlockPath.gif" width="600" alt="Blocked Path">
