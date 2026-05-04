@@ -32,7 +32,7 @@ The algorithm supports different neighbor connectivity, which dictates how the "
 ### **Obstacle Handling & Blocked Paths**
 The planner intelligently navigates around objects (Value = 1). If the goal is completely enclosed by obstacles, the algorithm will terminate and notify the user that no path is possible.
 
-![Blocked Path Example](images/WavefrontApp_BlockedPath.png)
+![Blocked Path Example](images/WavefrontPlanner_BlockedPath.png)
 
 ---
 
